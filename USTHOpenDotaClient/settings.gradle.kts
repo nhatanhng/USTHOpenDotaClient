@@ -14,4 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "USTHOpenDotaClient"
-include ':app'
+include(":app")
+ 
