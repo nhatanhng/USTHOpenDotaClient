@@ -120,8 +120,8 @@
         android:layout_height="170dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="271dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="273dp"
         android:background="@color/dark_blue" />
 
     <ImageView
@@ -166,8 +166,8 @@
         android:layout_height="170dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="209dp"
-        android:layout_marginTop="271dp"
+        android:layout_marginLeft="198dp"
+        android:layout_marginTop="273dp"
         android:background="@color/dark_blue" />
 
     <ImageView
