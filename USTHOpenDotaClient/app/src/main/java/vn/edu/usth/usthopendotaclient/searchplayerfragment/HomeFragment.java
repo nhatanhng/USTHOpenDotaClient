@@ -13,13 +13,12 @@ import android.widget.TextView;
 import vn.edu.usth.usthopendotaclient.R;
 
 
-public class PlayerHeroesFragment extends Fragment {
-    private LinearLayout mlinearLayout;
+public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_player_heroes, container, false);
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
         return v;
     }
 }
