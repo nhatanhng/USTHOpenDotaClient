@@ -5,19 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="#FFFFFF">
-
-
-
+    android:background="@color/background">
 
     <RelativeLayout
         android:id="@+id/rectangle_2"
-        android:layout_width="385dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="66dp"
         android:background="@color/dark_blue" >
 
         <TextView
@@ -78,14 +71,11 @@
 
     <RelativeLayout
         android:id="@+id/rectangle_3"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="183dp"
+        android:layout_height="235dp"
         android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/rectangle_2"
         android:background="@color/dark_blue" >
 
         <ImageView
@@ -111,10 +101,10 @@
             android:id="@+id/text6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/text5"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="110dp"
-            android:gravity="top"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
             android:text="All project code is open source and available for contributors to improve and modify."
             android:textColor="@color/white"
             android:textSize="15sp" />
@@ -124,14 +114,11 @@
 
     <RelativeLayout
         android:id="@+id/rectangle_4"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="183dp"
+        android:layout_height="235dp"
+        android:layout_below="@id/rectangle_2"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="14dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="5dp"
         android:background="@color/dark_blue" >
 
         <ImageView
@@ -158,10 +145,11 @@
             android:id="@+id/text8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/text7"
+            android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="110dp"
-            android:gravity="top"
+            android:layout_marginTop="5dp"
             android:text="Parsing replay files provides highly detailed match data."
             android:textColor="@color/white"
             android:textSize="15sp" />
@@ -171,12 +159,11 @@
 
     <RelativeLayout
         android:id="@+id/rectangle_5"
-        android:layout_width="385dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="462dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/rectangle_4"
         android:background="@color/dark_blue" >
 
         <ImageView
@@ -201,9 +188,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_below="@id/text9"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="120dp"
-            android:gravity="top"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
             android:text="Server are funded by sponsors and volunteers maintain the code, so the service is offered free of charge."
             android:textColor="@color/white"
             android:textSize="18sp" />
