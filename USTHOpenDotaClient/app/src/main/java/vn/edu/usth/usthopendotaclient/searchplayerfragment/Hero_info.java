@@ -14,7 +14,6 @@ import vn.edu.usth.usthopendotaclient.R;
 
 
 public class Hero_info extends Fragment {
-    private LinearLayout mlinearLayout;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
