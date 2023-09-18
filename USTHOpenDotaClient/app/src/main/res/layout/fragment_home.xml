@@ -7,34 +7,7 @@
     android:clipToOutline="true"
     android:background="#FFFFFF">
 
-    <RelativeLayout
-        android:id="@+id/rectangle_1"
-        android:layout_width="385dp"
-        android:layout_height="56dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="5dp"
-        android:background="@color/dark_blue">
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="30dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:src="@drawable/menu_icon" />
 
-        <TextView
-            android:id="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="17dp"
-            android:text="Home"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:gravity="top"
-            />
-    </RelativeLayout>
 
 
     <RelativeLayout

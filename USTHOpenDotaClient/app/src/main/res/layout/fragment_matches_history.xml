@@ -12,7 +12,6 @@
         tools:context=".searchplayerfragment.MatchesHistoryFragment"
         android:background="@color/dark_blue">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="86dp"
