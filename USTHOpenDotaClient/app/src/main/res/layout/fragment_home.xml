@@ -5,14 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToOutline="true"
-    android:background="@color/background"
-    android:layout_marginTop="15dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
-
-
-
-
+    android:background="#FFFFFF">
 
 
 
@@ -20,14 +13,12 @@
     <RelativeLayout
         android:id="@+id/rectangle_2"
         android:layout_width="385dp"
-
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_alignParentTop="true"
-
-        android:background="@color/item"
-        >
+        android:layout_marginTop="66dp"
+        android:background="@color/dark_blue" >
 
         <TextView
             android:id="@+id/text2"
@@ -87,16 +78,15 @@
 
     <RelativeLayout
         android:id="@+id/rectangle_3"
-
-        android:layout_width="183dp"
-        android:layout_height="210dp"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/rectangle_2"
-        android:layout_marginTop="5dp"
-        android:background="@color/item" >
-
-
-
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="270dp"
+        android:background="@color/dark_blue" >
 
         <ImageView
             android:id="@+id/open_source"
@@ -122,30 +112,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-
-            android:layout_below="@id/text5"
-            android:layout_marginTop="5dp"
-            android:gravity="center_horizontal"
-
             android:layout_marginLeft="30dp"
             android:layout_marginTop="110dp"
             android:gravity="top"
-
             android:text="All project code is open source and available for contributors to improve and modify."
             android:textColor="@color/white"
             android:textSize="15sp" />
     </RelativeLayout>
-
-
-    <RelativeLayout
-        android:id="@+id/rectangle_4"
-        android:layout_width="183dp"
-        android:layout_height="210dp"
-        android:layout_below="@id/rectangle_2"
-        android:layout_alignRight="@id/rectangle_3"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="5dp"
-        android:background="@color/item" >
 
 
 
@@ -160,7 +133,6 @@
         android:layout_marginRight="14dp"
         android:layout_marginTop="270dp"
         android:background="@color/dark_blue" >
-
 
         <ImageView
             android:id="@+id/data_chart"
@@ -186,16 +158,10 @@
             android:id="@+id/text8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:gravity="center_horizontal"
-            android:layout_below="@id/text7"
-            android:layout_marginTop="5dp"
-
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="110dp"
             android:gravity="top"
-
             android:text="Parsing replay files provides highly detailed match data."
             android:textColor="@color/white"
             android:textSize="15sp" />
@@ -203,48 +169,11 @@
     </RelativeLayout>
 
 
-
-
     <RelativeLayout
         android:id="@+id/rectangle_5"
-        android:layout_width="match_parent"
+        android:layout_width="385dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-
-        android:layout_marginTop="5dp"
-        android:layout_below="@id/rectangle_3"
-        android:background="@color/item"
-        >
-
-        <ImageView
-            android:id="@+id/magic"
-            android:layout_width="97dp"
-            android:layout_height="67dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/magic_icon" />
-
-        <TextView
-            android:id="@+id/text9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="top"
-            android:text="Free of Charge"
-            android:textColor="@color/light_blue"
-            android:textSize="24sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_below="@id/text9"
-            android:layout_marginTop="5dp"
-            android:text="Server are funded by sponsors and volunteers maintain the code, so the service is offered free of charge."
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-
         android:layout_centerVertical="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="462dp"
@@ -278,7 +207,6 @@
             android:text="Server are funded by sponsors and volunteers maintain the code, so the service is offered free of charge."
             android:textColor="@color/white"
             android:textSize="18sp" />
-
 
     </RelativeLayout>
 
