@@ -69,92 +69,103 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rectangle_3"
-        android:layout_width="183dp"
-        android:layout_height="235dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="5dp"
-        android:layout_below="@id/rectangle_2"
-        android:background="@color/dark_blue" >
+    <LinearLayout
+        android:id="@+id/linear_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:weightSum="1"
+        android:layout_below="@+id/rectangle_2"
+        android:orientation="horizontal" >
 
-        <ImageView
-            android:id="@+id/open_source"
-            android:layout_width="65dp"
-            android:layout_height="67dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/open_source_icon" />
-
-        <TextView
-            android:id="@+id/text5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="top"
-            android:text="Open Source"
-            android:textColor="@color/light_blue"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/text6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text5"
-            android:layout_centerHorizontal="true"
+        <RelativeLayout
+            android:id="@+id/rectangle_3"
+            android:layout_width="183dp"
+            android:layout_height="235dp"
             android:layout_marginTop="5dp"
             android:gravity="center_horizontal"
-            android:text="All project code is open source and available for contributors to improve and modify."
-            android:textColor="@color/white"
-            android:textSize="15sp" />
-    </RelativeLayout>
+            android:layout_weight="0.5"
+            android:background="@color/dark_blue" >
+
+            <ImageView
+                android:id="@+id/open_source"
+                android:layout_width="65dp"
+                android:layout_height="67dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/open_source_icon" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Open Source"
+                android:textColor="@color/light_blue"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="All project code is open source and available for contributors to improve and modify."
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
 
 
 
-    <RelativeLayout
-        android:id="@+id/rectangle_4"
-        android:layout_width="183dp"
-        android:layout_height="235dp"
-        android:layout_below="@id/rectangle_2"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="5dp"
-        android:background="@color/dark_blue" >
+        <RelativeLayout
+            android:id="@+id/rectangle_4"
+            android:layout_width="183dp"
+            android:layout_height="235dp"
 
-        <ImageView
-            android:id="@+id/data_chart"
-            android:layout_width="65dp"
-            android:layout_height="67dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
+            android:layout_weight="0.5"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="5dp"
-            android:src="@drawable/data_chart_icon" />
+            android:background="@color/dark_blue" >
 
-        <TextView
-            android:id="@+id/text7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="top"
-            android:text="In_depth Data"
-            android:textColor="@color/light_blue"
-            android:textSize="22sp" />
+            <ImageView
+                android:id="@+id/data_chart"
+                android:layout_width="65dp"
+                android:layout_height="67dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/data_chart_icon" />
 
-        <TextView
-            android:id="@+id/text8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text7"
-            android:gravity="center_horizontal"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="5dp"
-            android:text="Parsing replay files provides highly detailed match data."
-            android:textColor="@color/white"
-            android:textSize="15sp" />
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="In_depth Data"
+                android:textColor="@color/light_blue"
+                android:textSize="22sp" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text7"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Parsing replay files provides highly detailed match data."
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
 
 
     <RelativeLayout
@@ -163,7 +174,7 @@
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:layout_below="@id/rectangle_4"
+        android:layout_below="@id/linear_layout1"
         android:background="@color/dark_blue" >
 
         <ImageView
