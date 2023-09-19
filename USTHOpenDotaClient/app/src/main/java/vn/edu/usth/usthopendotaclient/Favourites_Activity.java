@@ -1,43 +1,39 @@
 package vn.edu.usth.usthopendotaclient;
 
+import android.content.Intent;
+import android.os.Bundle;
+
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+import vn.edu.usth.usthopendotaclient.databinding.ActivityFavouritesBinding;
 
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.navigation.NavigationView;
-
-import vn.edu.usth.usthopendotaclient.searchplayerfragment.HomeFragment;
-import vn.edu.usth.usthopendotaclient.searchplayerfragment.PlayerHeroesFragment;
-
-public class MainActivity extends AppCompatActivity{
+public class Favourites_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_favourites);
 
-//        // Player heroes fragment initial
-//        PlayerHeroesFragment firstFragment = new PlayerHeroesFragment();
-//        getSupportFragmentManager().beginTransaction().add(
-//                R.id.container, firstFragment
-//        ).commit();
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.favourites_toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        DrawerLayout drawerLayout = findViewById(R.id.fav_drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_view);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -55,19 +51,19 @@ public class MainActivity extends AppCompatActivity{
                 if (id == R.id.nav_home){
 //                    Toast toast = Toast.makeText(MainActivity.this, " Homw has been clicked", Toast.LENGTH_SHORT);
 //                    toast.show();
-                    Intent intent= new Intent(MainActivity.this, MainActivity.class);
+                    Intent intent= new Intent(Favourites_Activity.this, MainActivity.class);
                     startActivity(intent);
                 }
                 if (id == R.id.nav_favourite){
-                    Intent intent= new Intent(MainActivity.this, Favourites_Activity.class);
+                    Intent intent= new Intent(Favourites_Activity.this, Favourites_Activity.class);
                     startActivity(intent);
                 }
                 if (id == R.id.nav_search){
-                    Intent intent= new Intent(MainActivity.this, Search_Activity.class);
+                    Intent intent= new Intent(Favourites_Activity.this, Search_Activity.class);
                     startActivity(intent);
                 }
                 if (id == R.id.nav_setting){
-                    Toast toast = Toast.makeText(MainActivity.this, " Setting has been clicked", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(Favourites_Activity.this, " Setting has been clicked", Toast.LENGTH_SHORT);
                     toast.show();
                 }
 
