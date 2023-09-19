@@ -104,7 +104,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -153,7 +153,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -202,7 +202,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -234,54 +234,59 @@
                     android:textColor="@color/white"
                     />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_weight="1"
-                android:weightSum="1"
-                android:background="@color/purple">
+                android:background="@color/purple"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
                 <ImageView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
-                    android:src="@drawable/antim"
-                    />
+                    android:src="@drawable/antim" />
+
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
-                    android:textSize="24sp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Lose"
-                    android:textSize="25sp"
-                    android:textColor="@color/lose"/>
+                    android:textColor="@color/lose"
+                    android:textSize="25sp" />
+
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="36:57"
-                    android:textSize="25sp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="8/4/8"
-                    android:textSize="25sp"
                     android:textColor="@color/white"
-                    />
+                    android:textSize="25sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -299,7 +304,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -348,7 +353,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -397,7 +402,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -446,7 +451,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -495,7 +500,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -543,7 +548,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -592,7 +597,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
@@ -641,7 +646,7 @@
                     />
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Ranked"
