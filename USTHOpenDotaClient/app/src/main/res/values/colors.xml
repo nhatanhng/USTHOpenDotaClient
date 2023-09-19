@@ -3,10 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dark_blue">#220B48</color>
+    <color name="tablayout_item">#BF220B48</color>
     <color name="light_blue">#03A9F4</color>
-
-
-
 
     <color name="background">#131623</color>
     <color name="item">#262738</color>
@@ -16,5 +14,10 @@
     <color name="lose">#e84057</color>
     <color name="gray">#777777</color>
     <color name="purple">#434a9f</color>
+
+    <color name="wins_loses_winrate">#FFFFFF</color>
+    <color name="winProgress">#00bc8c</color>
+    <color name="looseProgress">#FF1100</color>
+
 
 </resources>
