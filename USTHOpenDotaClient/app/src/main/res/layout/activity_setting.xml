@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/item"
                 app:navigationIcon="@drawable/menu_24"
-                app:title="setting"
+                app:title="Themes"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
             <RadioGroup
