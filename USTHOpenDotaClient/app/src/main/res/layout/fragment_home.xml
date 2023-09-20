@@ -10,7 +10,7 @@
         android:id="@+id/rectangle_2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/dark_blue">
+        android:background="@color/item">
 
         <TextView
             android:id="@+id/text2"
@@ -81,7 +81,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/dark_blue"
+            android:background="@color/item"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -106,6 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center_horizontal"
                 android:text="All project code is open source and available for contributors to improve and modify."
                 android:textColor="@color/white"
@@ -120,7 +121,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="8dp"
             android:layout_weight="1"
-            android:background="@color/dark_blue">
+            android:background="@color/item">
 
             <ImageView
                 android:id="@+id/data_chart"
@@ -159,7 +160,7 @@
         android:layout_below="@id/ll_os_idd"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:background="@color/dark_blue">
+        android:background="@color/item">
 
         <ImageView
             android:id="@+id/magic"
