@@ -70,8 +70,8 @@ public class Search_Activity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if (id == R.id.nav_setting){
-                    Toast toast = Toast.makeText(Search_Activity.this, " Setting has been clicked", Toast.LENGTH_SHORT);
-                    toast.show();
+                    Intent intent = new Intent(Search_Activity.this, SettingActivity.class);
+                    startActivity(intent);
                 }
 
                 return true;

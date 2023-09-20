@@ -67,8 +67,8 @@ public class MainActivity extends AppCompatActivity{
                     startActivity(intent);
                 }
                 if (id == R.id.nav_setting){
-                    Toast toast = Toast.makeText(MainActivity.this, " Setting has been clicked", Toast.LENGTH_SHORT);
-                    toast.show();
+                    Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                    startActivity(intent);
                 }
 
                 return true;
