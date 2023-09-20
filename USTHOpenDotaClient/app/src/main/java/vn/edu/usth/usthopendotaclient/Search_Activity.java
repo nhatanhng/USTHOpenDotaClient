@@ -24,8 +24,8 @@ public class Search_Activity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<ModelClass> arrayList = new ArrayList<>();
     ArrayList<ModelClass> searchList;
-    String[] fruitList = new String[] {"a","b","c","d","e","f"}; //user name
-    String[] fruitNum = new String[] {"1","2","3","4","5","6"}; // user id
+    String[] userList = new String[] {"a","b","c","d","e","f"}; //user name
+    String[] userNum = new String[] {"1","2","3","4","5","6"}; // user id
     int[] imgList = new int[] {R.drawable.img1,R.drawable.img2,R.drawable.img3,R.drawable.img4,R.drawable.img5,R.drawable.img6};
 
     @Override
@@ -79,10 +79,10 @@ public class Search_Activity extends AppCompatActivity {
         });
 
 
-        for (int i = 0; i < fruitList.length; i++) {
+        for (int i = 0; i < userList.length; i++) {
             ModelClass modelClass = new ModelClass();
-            modelClass.setFruitName(fruitList[i]);
-            modelClass.setFruitNum(fruitNum[i]);
+            modelClass.setUserName(userList[i]);
+            modelClass.setUserNum(userNum[i]);
             modelClass.setImg(imgList[i]);
             arrayList.add(modelClass);
         }
@@ -90,8 +90,8 @@ public class Search_Activity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Search_Activity.this);
         recyclerView.setLayoutManager(layoutManager);
 
-        SearchAdapter fruitAdapter = new SearchAdapter(Search_Activity.this,arrayList);
-        recyclerView.setAdapter(fruitAdapter);
+        SearchAdapter userAdapter = new SearchAdapter(Search_Activity.this,arrayList);
+        recyclerView.setAdapter(userAdapter);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -99,10 +99,10 @@ public class Search_Activity extends AppCompatActivity {
                 searchList = new ArrayList<>();
                 if (query.length() > 0) {
                     for (int i = 0; i < arrayList.size(); i++) {
-                        if (arrayList.get(i).getFruitName().toUpperCase().contains(query.toUpperCase()) || arrayList.get(i).getFruitNum().toUpperCase().contains(query.toUpperCase())) {
+                        if (arrayList.get(i).getUserName().toUpperCase().contains(query.toUpperCase()) || arrayList.get(i).getUserNum().toUpperCase().contains(query.toUpperCase())) {
                             ModelClass modelClass = new ModelClass();
-                            modelClass.setFruitName(arrayList.get(i).getFruitName());
-                            modelClass.setFruitNum(arrayList.get(i).getFruitNum());
+                            modelClass.setUserName(arrayList.get(i).getUserName());
+                            modelClass.setUserNum(arrayList.get(i).getUserNum());
                             modelClass.setImg(arrayList.get(i).getImg());
                             searchList.add(modelClass);
                         }
@@ -111,16 +111,16 @@ public class Search_Activity extends AppCompatActivity {
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Search_Activity.this);
                     recyclerView.setLayoutManager(layoutManager);
 
-                    SearchAdapter fruitAdapter = new SearchAdapter(Search_Activity.this,searchList);
-                    recyclerView.setAdapter(fruitAdapter);
+                    SearchAdapter userAdapter = new SearchAdapter(Search_Activity.this,searchList);
+                    recyclerView.setAdapter(userAdapter);
                 }
 
                 else{
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Search_Activity.this);
                     recyclerView.setLayoutManager(layoutManager);
 
-                    SearchAdapter fruitAdapter = new SearchAdapter(Search_Activity.this,arrayList);
-                    recyclerView.setAdapter(fruitAdapter);
+                    SearchAdapter userAdapter = new SearchAdapter(Search_Activity.this,arrayList);
+                    recyclerView.setAdapter(userAdapter);
                 }
 
                 return false;
@@ -131,10 +131,10 @@ public class Search_Activity extends AppCompatActivity {
                 searchList = new ArrayList<>();
                 if (newText.length() > 0) {
                     for (int i = 0; i < arrayList.size(); i++) {
-                        if (arrayList.get(i).getFruitName().toUpperCase().contains(newText.toUpperCase()) || arrayList.get(i).getFruitNum().toUpperCase().contains(newText.toUpperCase())) {
+                        if (arrayList.get(i).getUserName().toUpperCase().contains(newText.toUpperCase()) || arrayList.get(i).getUserNum().toUpperCase().contains(newText.toUpperCase())) {
                             ModelClass modelClass = new ModelClass();
-                            modelClass.setFruitName(arrayList.get(i).getFruitName());
-                            modelClass.setFruitNum(arrayList.get(i).getFruitNum());
+                            modelClass.setUserName(arrayList.get(i).getUserName());
+                            modelClass.setUserNum(arrayList.get(i).getUserNum());
                             modelClass.setImg(arrayList.get(i).getImg());
                             searchList.add(modelClass);
                         }
@@ -143,16 +143,16 @@ public class Search_Activity extends AppCompatActivity {
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Search_Activity.this);
                     recyclerView.setLayoutManager(layoutManager);
 
-                    SearchAdapter fruitAdapter = new SearchAdapter(Search_Activity.this,searchList);
-                    recyclerView.setAdapter(fruitAdapter);
+                    SearchAdapter userAdapter = new SearchAdapter(Search_Activity.this,searchList);
+                    recyclerView.setAdapter(userAdapter);
                 }
 
                 else{
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Search_Activity.this);
                     recyclerView.setLayoutManager(layoutManager);
 
-                    SearchAdapter fruitAdapter = new SearchAdapter(Search_Activity.this,arrayList);
-                    recyclerView.setAdapter(fruitAdapter);
+                    SearchAdapter userAdapter = new SearchAdapter(Search_Activity.this,arrayList);
+                    recyclerView.setAdapter(userAdapter);
                 }
                 return false;
             }
