@@ -10,6 +10,7 @@
     android:id="@+id/setting_drawer_layout">
 
     <RelativeLayout
+        android:id="@+id/relative_layout_setting"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background" >
