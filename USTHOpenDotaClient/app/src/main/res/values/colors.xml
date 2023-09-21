@@ -12,7 +12,7 @@
 
     <color name="win">#90ee90</color>
     <color name="lose">#e84057</color>
-    <color name="gray">#777777</color>
+    <color name="gray">#b2b2b2</color>
     <color name="purple">#434a9f</color>
 
     <color name="wins_loses_winrate">#FFFFFF</color>
