@@ -33,8 +33,8 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
-        holder.fruitName.setText(arrayList.get(position).getFruitName());
-        holder.fruitNum.setText(arrayList.get(position).getFruitNum());
+        holder.userName.setText(arrayList.get(position).getUserName());
+        holder.userNum.setText(arrayList.get(position).getUserNum());
         holder.img.setImageResource(arrayList.get(position).getImg());
 
     }
@@ -46,14 +46,14 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyHolder>{
     }
 
     public class MyHolder extends RecyclerView.ViewHolder {
-        TextView fruitName,fruitNum;
+        TextView userName,userNum;
         ImageView img;
 
         public MyHolder(@NonNull View itemView) {
 
             super(itemView);
-            fruitName=itemView.findViewById(R.id.txt);
-            fruitNum=itemView.findViewById(R.id.txt2);
+            userName=itemView.findViewById(R.id.txt);
+            userNum=itemView.findViewById(R.id.txt2);
             img=itemView.findViewById(R.id.img);
 
         }

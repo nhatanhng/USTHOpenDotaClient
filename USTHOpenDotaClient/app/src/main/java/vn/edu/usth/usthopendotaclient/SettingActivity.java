@@ -1,43 +1,45 @@
 package vn.edu.usth.usthopendotaclient;
 
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.appcompat.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
+import androidx.core.view.WindowCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+import vn.edu.usth.usthopendotaclient.databinding.ActivitySettingBinding;
 
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.navigation.NavigationView;
+public class SettingActivity extends AppCompatActivity {
 
-import vn.edu.usth.usthopendotaclient.searchplayerfragment.HomeFragment;
-import vn.edu.usth.usthopendotaclient.searchplayerfragment.PlayerHeroesFragment;
-
-public class MainActivity extends AppCompatActivity{
+    public SettingActivity(){
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-//        // Player heroes fragment initial
-//        PlayerHeroesFragment firstFragment = new PlayerHeroesFragment();
-//        getSupportFragmentManager().beginTransaction().add(
-//                R.id.container, firstFragment
-//        ).commit();
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        setContentView(R.layout.activity_setting);
+        Toolbar toolbar = findViewById(R.id.setting_toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        DrawerLayout drawerLayout = findViewById(R.id.setting_drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_view);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -55,19 +57,19 @@ public class MainActivity extends AppCompatActivity{
                 if (id == R.id.nav_home){
 //                    Toast toast = Toast.makeText(MainActivity.this, " Homw has been clicked", Toast.LENGTH_SHORT);
 //                    toast.show();
-                    Intent intent= new Intent(MainActivity.this, MainActivity.class);
+                    Intent intent= new Intent(SettingActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
                 if (id == R.id.nav_favourite){
-                    Intent intent= new Intent(MainActivity.this, Favourites_Activity.class);
+                    Intent intent= new Intent(SettingActivity.this, Favourites_Activity.class);
                     startActivity(intent);
                 }
                 if (id == R.id.nav_search){
-                    Intent intent= new Intent(MainActivity.this, Search_Activity.class);
+                    Intent intent= new Intent(SettingActivity.this, Search_Activity.class);
                     startActivity(intent);
                 }
                 if (id == R.id.nav_setting){
-                    Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                    Intent intent = new Intent(SettingActivity.this, SettingActivity.class);
                     startActivity(intent);
                 }
 
