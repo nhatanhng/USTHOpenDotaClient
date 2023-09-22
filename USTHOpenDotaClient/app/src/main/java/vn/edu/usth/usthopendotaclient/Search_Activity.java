@@ -21,18 +21,25 @@ import java.util.ArrayList;
 
 public class Search_Activity extends AppCompatActivity {
     SearchView searchView;
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
+    private SearchAdapter searchAdapter;
     ArrayList<ModelClass> arrayList = new ArrayList<>();
     ArrayList<ModelClass> searchList;
-    String[] userList = new String[] {"a","b","c","d","e","f"}; //user name
-    String[] userNum = new String[] {"1","2","3","4","5","6"}; // user id
+    String[] userList = new String[] {"jojo","kaykay","jack","max","bon","david"}; //user name
+    String[] userNum = new String[] {"185476982","785412058","369801472","487621007","998745301","235014785"}; // user id
+    String[] userWinList = new String[] {"1", "8","45","10","6","21"};
+    String[] userLooseList = new String[] {"5","2","10","22","4","18"};
     int[] imgList = new int[] {R.drawable.img1,R.drawable.img2,R.drawable.img3,R.drawable.img4,R.drawable.img5,R.drawable.img6};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
         recyclerView=findViewById(R.id.recyclerView);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Search_Activity.this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
         searchView=findViewById(R.id.searchView);
         searchView.setIconified(false);
         searchView.clearFocus();
@@ -79,19 +86,19 @@ public class Search_Activity extends AppCompatActivity {
         });
 
 
+
         for (int i = 0; i < userList.length; i++) {
             ModelClass modelClass = new ModelClass();
             modelClass.setUserName(userList[i]);
             modelClass.setUserNum(userNum[i]);
             modelClass.setImg(imgList[i]);
+            modelClass.setUserWin(userWinList[i]);
+            modelClass.setUserLose(userLooseList[i]);
             arrayList.add(modelClass);
         }
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Search_Activity.this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        SearchAdapter userAdapter = new SearchAdapter(Search_Activity.this,arrayList);
-        recyclerView.setAdapter(userAdapter);
+        searchAdapter = new SearchAdapter(Search_Activity.this,arrayList);
+        recyclerView.setAdapter(searchAdapter);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -104,6 +111,8 @@ public class Search_Activity extends AppCompatActivity {
                             modelClass.setUserName(arrayList.get(i).getUserName());
                             modelClass.setUserNum(arrayList.get(i).getUserNum());
                             modelClass.setImg(arrayList.get(i).getImg());
+                            modelClass.setUserWin(arrayList.get(i).getUserWin());
+                            modelClass.setUserLose(arrayList.get(i).getUserLose());
                             searchList.add(modelClass);
                         }
                     }
@@ -136,6 +145,8 @@ public class Search_Activity extends AppCompatActivity {
                             modelClass.setUserName(arrayList.get(i).getUserName());
                             modelClass.setUserNum(arrayList.get(i).getUserNum());
                             modelClass.setImg(arrayList.get(i).getImg());
+                            modelClass.setUserWin(arrayList.get(i).getUserWin());
+                            modelClass.setUserLose(arrayList.get(i).getUserLose());
                             searchList.add(modelClass);
                         }
                     }
@@ -157,5 +168,7 @@ public class Search_Activity extends AppCompatActivity {
                 return false;
             }
         });
+
+
     }
 }

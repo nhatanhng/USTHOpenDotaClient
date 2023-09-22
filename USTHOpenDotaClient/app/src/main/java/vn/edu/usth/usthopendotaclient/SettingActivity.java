@@ -1,4 +1,3 @@
-package vn.edu.usth.usthopendotaclient;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
@@ -31,6 +30,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import vn.edu.usth.usthopendotaclient.R;
 import vn.edu.usth.usthopendotaclient.databinding.ActivitySettingBinding;
 
 public class SettingActivity extends AppCompatActivity {
@@ -62,12 +62,12 @@ public class SettingActivity extends AppCompatActivity {
                 if (checkedId == R.id.Theme_Hyperfuse) {
                     color = getResources().getColor(R.color.hyper_fuse);
                     text_color = getResources().getColor(R.color.white);
-                    tool_bar_color = getResources().getColor(R.color.hyper_fuse_bar);
+                    tool_bar_color = getResources().getColor(R.color.hyper_fuse);
                     Toast.makeText(SettingActivity.this, "Hyperfuse selected", Toast.LENGTH_SHORT).show();
                 } else if (checkedId == R.id.Theme_SkyDolch) {
                     color = getResources().getColor(R.color.sky_dolch);
                     text_color = getResources().getColor(R.color.black);
-                    tool_bar_color = getResources().getColor(R.color.sky_dolch_bar);
+                    tool_bar_color = getResources().getColor(R.color.sky_dolch);
                     Toast.makeText(SettingActivity.this, "Sky Dolch selected", Toast.LENGTH_SHORT).show();
                 } else if (checkedId == R.id.Theme_Default) {
                     color = getResources().getColor(R.color.background);
@@ -77,17 +77,17 @@ public class SettingActivity extends AppCompatActivity {
                 } else if (checkedId == R.id.Theme_Invisibility) {
                     color = getResources().getColor(R.color.invisibility);
                     text_color = getResources().getColor(R.color.black);
-                    tool_bar_color = getResources().getColor(R.color.invisibility_bar);
+                    tool_bar_color = getResources().getColor(R.color.invisibility);
                     Toast.makeText(SettingActivity.this, "Sky Dolch selected", Toast.LENGTH_SHORT).show();
                 } else if (checkedId == R.id.Theme_FUWA_FUWA_PINK) {
                     color = getResources().getColor(R.color.pink);
                     text_color = getResources().getColor(R.color.black);
-                    tool_bar_color = getResources().getColor(R.color.pink_bar);
+                    tool_bar_color = getResources().getColor(R.color.pink);
                     Toast.makeText(SettingActivity.this, "Sky Dolch selected", Toast.LENGTH_SHORT).show();
                 } else if (checkedId == R.id.Theme_NightDota) {
                     color = getResources().getColor(R.color.night_dota);
                     text_color = getResources().getColor(R.color.white);
-                    tool_bar_color = getResources().getColor(R.color.night_dota_bar);
+                    tool_bar_color = getResources().getColor(R.color.night_dota);
                     Toast.makeText(SettingActivity.this, "Sky Dolch selected", Toast.LENGTH_SHORT).show();
                 }
 

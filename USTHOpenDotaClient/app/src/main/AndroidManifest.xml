@@ -18,11 +18,6 @@
             android:label="@string/title_activity_setting"
             android:theme="@style/Theme.USTHOpenDotaClient" />
         <activity
-            android:name=".SettingFragment"
-            android:exported="false"
-            android:label="@string/title_activity_setting_fragment"
-            android:theme="@style/Theme.USTHOpenDotaClient" />
-        <activity
             android:name=".Search_Activity"
             android:exported="false"
             android:label="@string/title_activity_search"
@@ -36,7 +31,13 @@
             android:name=".searchplayerfragment.playerProfile_Activity"
             android:exported="false"
             android:label="@string/title_activity_player_profile"
-            android:theme="@style/Theme.USTHOpenDotaClient" />
+            android:theme="@style/Theme.USTHOpenDotaClient"/>
+        <activity
+            android:name=".searchplayerfragment.Hero_info"
+            android:exported="false"
+            android:label="Hero_infor"
+            android:theme="@style/Theme.USTHOpenDotaClient"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

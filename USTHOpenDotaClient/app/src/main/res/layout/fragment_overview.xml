@@ -21,81 +21,82 @@
             tools:context=".searchplayerfragment.MatchesHistoryFragment"
             android:background="@color/item"
             android:layout_weight="1">
-                    <ImageView
-                        android:id="@+id/A_image"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/outline_account_circle_24"
-                        android:layout_marginTop="10dp"/>
-                    <TextView
-                        android:id="@+id/A_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="jojo"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:textAlignment="center"
-                        android:textSize="25sp"/>
-                    <LinearLayout
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/A_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outline_account_circle_24"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/A_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jojo"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="25sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/wins"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="9"
-                    android:layout_marginTop="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:textColor="@color/wins_loses_winrate"
-                        android:text="WINS\n45"
-                        android:textSize="@dimen/wins_loses_winrate"
-                        android:textAlignment="center"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:text="LOSSES\n50"
-                        android:textColor="@color/wins_loses_winrate"
-                        android:textSize="@dimen/wins_loses_winrate"
-                        android:textAlignment="center"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:text="WINRATE\n90%"
-                        android:textColor="@color/wins_loses_winrate"
-                        android:textSize="@dimen/wins_loses_winrate"
-                        android:textAlignment="center"/>
-                </LinearLayout>
-                    <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="65dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:src="@drawable/dota_2_rank_guardian_5"
-
-                    />
-                    <ProgressBar
-                        android:id="@+id/progressBar"
-                        android:paddingTop="18dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:max="100"
-                        android:progress="90"
-                        android:secondaryProgress="100"
-                        android:progressTint="@color/winProgress"
-                        android:secondaryProgressTint="@color/looseProgress"
-                        style="@android:style/Widget.ProgressBar.Horizontal"/>
-                    <TextView
-                            android:id="@+id/profile_steam"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="stream account goes here"
-                            android:padding="15dp"
-                            android:textSize="15sp"
-                            android:textColor="@color/white"/>
+                    android:layout_weight="3"
+                    android:textColor="@color/wins_loses_winrate"
+                    android:text="WINS\n45"
+                    android:textSize="@dimen/wins_loses_winrate"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/losses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="LOSSES\n50"
+                    android:textColor="@color/wins_loses_winrate"
+                    android:textSize="@dimen/wins_loses_winrate"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/winrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="WINRATE\n47%"
+                    android:textColor="@color/wins_loses_winrate"
+                    android:textSize="@dimen/wins_loses_winrate"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="70dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/dota_2_rank_guardian_5"
+                />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:paddingTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:max="100"
+                android:progress="47"
+                android:secondaryProgress="100"
+                android:progressTint="@color/winProgress"
+                android:secondaryProgressTint="@color/looseProgress"
+                style="@android:style/Widget.ProgressBar.Horizontal"/>
+            <TextView
+                android:id="@+id/profile_steam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="stream account goes here"
+                android:padding="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/white"/>
         </LinearLayout>
-
         <LinearLayout
             android:id="@+id/recent_matches"
             android:layout_width="match_parent"
@@ -105,6 +106,7 @@
             android:background="@color/item"
             android:layout_marginTop="10dp"
             android:layout_weight="1">
+
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -129,6 +131,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="1"
+                android:padding="10dp"
                 android:layout_marginTop="2dp">
                 <TextView
                     android:layout_width="fill_parent"
@@ -136,7 +139,7 @@
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Hero"
-                    android:textSize="25sp"
+                    android:textSize="@dimen/recentMaches_overview_textsize"
                     android:textColor="@color/white"/>
                 <TextView
                     android:layout_width="fill_parent"
@@ -144,7 +147,7 @@
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Mode"
-                    android:textSize="25sp"
+                    android:textSize="@dimen/recentMaches_overview_textsize"
                     android:textColor="@color/white"/>
                 <TextView
                     android:layout_width="fill_parent"
@@ -152,7 +155,7 @@
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Match"
-                    android:textSize="25sp"
+                    android:textSize="@dimen/recentMaches_overview_textsize"
                     android:textColor="@color/white"/>
                 <TextView
                     android:layout_width="fill_parent"
@@ -160,7 +163,7 @@
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="Length"
-                    android:textSize="25sp"
+                    android:textSize="@dimen/recentMaches_overview_textsize"
                     android:textColor="@color/white"/>
                 <TextView
                     android:layout_width="fill_parent"
@@ -168,7 +171,7 @@
                     android:layout_weight="0.2"
                     android:gravity="center"
                     android:text="K/D/A"
-                    android:textSize="25sp"
+                    android:textSize="@dimen/recentMaches_overview_textsize"
                     android:textColor="@color/white"/>
 
             </LinearLayout>
@@ -186,7 +189,7 @@
                     android:weightSum="1"
                     android:background="@color/gray"
                     >
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
@@ -199,7 +202,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="Ranked"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -207,7 +210,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="Win"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/win"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -215,7 +218,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="35:03"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -223,7 +226,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="11/2/8"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"
                         />
                 </LinearLayout>
@@ -235,7 +238,7 @@
                     android:weightSum="1"
                     android:background="@color/purple"
                     >
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
@@ -248,7 +251,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="Ranked"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -256,7 +259,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="Win"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/win"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -264,7 +267,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="45:23"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -272,7 +275,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="1/0/5"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"
                         />
                 </LinearLayout>
@@ -284,7 +287,7 @@
                     android:weightSum="1"
                     android:background="@color/gray"
                     >
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
@@ -297,15 +300,15 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="Ranked"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="0.2"
                         android:gravity="center"
-                        android:text="Lose"
-                        android:textSize="25sp"
+                        android:text="@dimen/recentMaches_overview_textsize"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/lose"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -313,7 +316,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="20:44"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -321,7 +324,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="9/3/18"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"
                         />
                 </LinearLayout>
@@ -332,7 +335,7 @@
                     android:layout_weight="1"
                     android:weightSum="1"
                     android:background="@color/purple">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
@@ -345,7 +348,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="Ranked"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -353,7 +356,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="Lose"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/lose"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -361,7 +364,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="36:57"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -369,7 +372,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="8/4/8"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"
                         />
                 </LinearLayout>
@@ -381,7 +384,7 @@
                     android:weightSum="1"
                     android:background="@color/gray"
                     >
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
@@ -394,7 +397,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="Ranked"
-                        android:textSize="24sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -402,7 +405,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="Win"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/win"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -410,7 +413,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="35:03"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"/>
                     <TextView
                         android:layout_width="fill_parent"
@@ -418,7 +421,7 @@
                         android:layout_weight="0.2"
                         android:gravity="center"
                         android:text="1/2/8"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/recentMaches_overview_textsize"
                         android:textColor="@color/white"
                         />
                 </LinearLayout>
