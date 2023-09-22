@@ -55,7 +55,7 @@ public class playerProfile_Activity extends AppCompatActivity {
 //        loose.setText(user.getUserLose());
 
 
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,user);
         myViewPager.setOffscreenPageLimit(3);
         myViewPager.setAdapter(viewPagerAdapter);
         myTabLayout.setupWithViewPager(myViewPager);

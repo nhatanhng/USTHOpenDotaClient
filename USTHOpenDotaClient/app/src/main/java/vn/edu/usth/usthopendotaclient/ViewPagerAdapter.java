@@ -11,18 +11,19 @@ import vn.edu.usth.usthopendotaclient.searchplayerfragment.PlayerHeroesFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     private String titles[]=new String[]{"Overview","Matches","Heroes"};
-    public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+    ModelClass user;
+    public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior, ModelClass user) {
         super(fm,behavior);
+        this.user=user;
     }
 
     @NonNull
     @Override
     public Fragment getItem(int page) {
         switch (page){
-            case 0: return new OverviewFragment();
             case 1: return new Matches_History_Fragment();
             case 2: return new PlayerHeroesFragment();
-            default: return new OverviewFragment();
+            default: return new OverviewFragment(user);
         }
     }
 

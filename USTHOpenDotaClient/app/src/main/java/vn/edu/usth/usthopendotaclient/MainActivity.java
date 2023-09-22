@@ -1,27 +1,19 @@
 package vn.edu.usth.usthopendotaclient;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 
-import vn.edu.usth.usthopendotaclient.searchplayerfragment.HomeFragment;
-import vn.edu.usth.usthopendotaclient.searchplayerfragment.PlayerHeroesFragment;
-
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,21 +44,21 @@ public class MainActivity extends AppCompatActivity{
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 drawerLayout.closeDrawer(GravityCompat.START);
-                if (id == R.id.nav_home){
+                if (id == R.id.nav_home) {
 //                    Toast toast = Toast.makeText(MainActivity.this, " Homw has been clicked", Toast.LENGTH_SHORT);
 //                    toast.show();
-                    Intent intent= new Intent(MainActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
-                if (id == R.id.nav_favourite){
-                    Intent intent= new Intent(MainActivity.this, Favourites_Activity.class);
+                if (id == R.id.nav_favourite) {
+                    Intent intent = new Intent(MainActivity.this, Favourites_Activity.class);
                     startActivity(intent);
                 }
-                if (id == R.id.nav_search){
-                    Intent intent= new Intent(MainActivity.this, Search_Activity.class);
+                if (id == R.id.nav_search) {
+                    Intent intent = new Intent(MainActivity.this, Search_Activity.class);
                     startActivity(intent);
                 }
-                if (id == R.id.nav_setting){
+                if (id == R.id.nav_setting) {
                     Intent intent = new Intent(MainActivity.this, SettingActivity.class);
                     startActivity(intent);
                 }

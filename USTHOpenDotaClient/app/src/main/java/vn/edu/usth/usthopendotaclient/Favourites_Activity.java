@@ -24,7 +24,6 @@ import androidx.navigation.ui.NavigationUI;
 import vn.edu.usth.usthopendotaclient.databinding.ActivityFavouritesBinding;
 
 public class Favourites_Activity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
