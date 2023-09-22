@@ -60,7 +60,6 @@
         app:itemIconSize="45dp"
         android:background="@color/item"
         app:itemIconTint="@color/icon_color"
-        app:insetForeground="#FFEB3B"
         android:layout_gravity="start"
         android:theme="@style/NavigationView_line"
         android:fitsSystemWindows="true"

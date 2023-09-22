@@ -71,4 +71,6 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="title_activity_search">Search_Activity</string>
+    <string name="title_activity_setting_fragment">SettingFragment</string>
+    <string name="title_activity_setting">SettingActivity</string>
 </resources>

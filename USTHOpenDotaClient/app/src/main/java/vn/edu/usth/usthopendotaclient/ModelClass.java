@@ -1,23 +1,23 @@
 package vn.edu.usth.usthopendotaclient;
 
 public class ModelClass {
-    String fruitName,fruitNum;
+    String userName,userNum; //userNum=user id
     int img;
 
-    public String getFruitName() {
-        return fruitName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setFruitName(String fruitName) {
-        this.fruitName = fruitName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getFruitNum() {
-        return fruitNum;
+    public String getUserNum() {
+        return userNum;
     }
 
-    public void setFruitNum(String fruitNum) {
-        this.fruitNum = fruitNum;
+    public void setUserNum(String userNum) {
+        this.userNum = userNum;
     }
 
     public int getImg() {
