@@ -17,14 +17,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
-             <de.hdodenhof.circleimageview.CircleImageView
+             <ImageView
                 android:id="@+id/ava_anti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/antim"
                 android:textAlignment="center"/>
 
-             <de.hdodenhof.circleimageview.CircleImageView
+             <ImageView
                  android:id="@+id/agility"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
@@ -90,22 +90,22 @@
                 android:layout_marginTop="30dp"
                 android:weightSum="1">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:src="@drawable/antimage_mana_break" />
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:src="@drawable/antimage_blink" />
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:src="@drawable/antimage_counterspell" />
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
