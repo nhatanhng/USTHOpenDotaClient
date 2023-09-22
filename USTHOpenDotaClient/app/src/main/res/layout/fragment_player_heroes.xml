@@ -80,6 +80,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/invoker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -105,7 +106,6 @@
                 android:orientation="horizontal"
                 android:weightSum="1"
                 android:background="@color/gray">
-
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -149,6 +149,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/anti_mage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -214,6 +215,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/slark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
