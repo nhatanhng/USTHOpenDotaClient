@@ -106,7 +106,7 @@
                 android:weightSum="1"
                 android:background="@color/gray">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
@@ -174,7 +174,7 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
@@ -241,7 +241,7 @@
                 android:weightSum="1"
                 android:background="@color/gray">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
