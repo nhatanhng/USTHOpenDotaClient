@@ -6,10 +6,15 @@
     <color name="tablayout_item">#BF220B48</color>
     <color name="light_blue">#03A9F4</color>
     <color name="pink">#FFE4ED</color>
+    <color name="pink_bar">#ccb6bd</color>
     <color name="hyper_fuse">#171718</color>
+    <color name="hyper_fuse_bar">#3b3b3e</color>
     <color name="sky_dolch">#abc6dc</color>
+    <color name="sky_dolch_bar">#5b6a76</color>
     <color name="invisibility">#e1d8cd</color>
+    <color name="invisibility_bar">#a19a91</color>
     <color name="night_dota">#4e5156</color>
+    <color name="night_dota_bar">#1f2023</color>
 
 
 
