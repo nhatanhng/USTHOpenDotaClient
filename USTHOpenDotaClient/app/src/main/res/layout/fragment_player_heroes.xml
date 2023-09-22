@@ -80,6 +80,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/invoker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -149,6 +150,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/anti_mage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -214,6 +216,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/slark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

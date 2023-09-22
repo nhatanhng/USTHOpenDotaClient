@@ -55,7 +55,7 @@ public class SettingActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 drawerLayout.closeDrawer(GravityCompat.START);
                 if (id == R.id.nav_home){
-//                    Toast toast = Toast.makeText(MainActivity.this, " Homw has been clicked", Toast.LENGTH_SHORT);
+//                    Toast toast = Toast.makeText(MainActivity.this, " Home has been clicked", Toast.LENGTH_SHORT);
 //                    toast.show();
                     Intent intent= new Intent(SettingActivity.this, MainActivity.class);
                     startActivity(intent);

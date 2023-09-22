@@ -1,8 +1,11 @@
 package vn.edu.usth.usthopendotaclient.searchplayerfragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +16,11 @@ import android.widget.TextView;
 import vn.edu.usth.usthopendotaclient.R;
 
 
-public class Hero_info extends Fragment {
+public class Hero_info extends AppCompatActivity {
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.hero_info, container, false);
-        return v;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.hero_info);
+
     }
 }
