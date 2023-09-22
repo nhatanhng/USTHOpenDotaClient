@@ -75,22 +75,22 @@ public class SettingActivity extends AppCompatActivity {
                     color = getResources().getColor(R.color.background);
                     text_color = getResources().getColor(R.color.white);
                     tool_bar_color = getResources().getColor(R.color.item);
-                    Toast.makeText(SettingActivity.this, "Sky Dolch selected", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SettingActivity.this, "Default selected", Toast.LENGTH_SHORT).show();
                 } else if (checkedId == R.id.Theme_Invisibility) {
                     color = getResources().getColor(R.color.invisibility);
                     text_color = getResources().getColor(R.color.black);
                     tool_bar_color = getResources().getColor(R.color.invisibility_bar);
-                    Toast.makeText(SettingActivity.this, "Sky Dolch selected", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SettingActivity.this, "Invisibility selected", Toast.LENGTH_SHORT).show();
                 } else if (checkedId == R.id.Theme_FUWA_FUWA_PINK) {
                     color = getResources().getColor(R.color.pink);
                     text_color = getResources().getColor(R.color.black);
                     tool_bar_color = getResources().getColor(R.color.pink_bar);
-                    Toast.makeText(SettingActivity.this, "Sky Dolch selected", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SettingActivity.this, "Fuwa Fuwa pink selected", Toast.LENGTH_SHORT).show();
                 } else if (checkedId == R.id.Theme_NightDota) {
                     color = getResources().getColor(R.color.night_dota);
                     text_color = getResources().getColor(R.color.white);
                     tool_bar_color = getResources().getColor(R.color.night_dota_bar);
-                    Toast.makeText(SettingActivity.this, "Sky Dolch selected", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SettingActivity.this, "Night dota selected", Toast.LENGTH_SHORT).show();
                 }
 
                 relativeLayoutSetting.setBackgroundColor(color);
