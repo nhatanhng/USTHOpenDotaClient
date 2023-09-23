@@ -20,13 +20,12 @@ import vn.edu.usth.usthopendotaclient.searchplayerfragment.playerProfile_Activit
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyHolder>{
     private Context context;
     private ArrayList<ModelClass> arrayListUser;
-    LayoutInflater layoutInflater;
 
     public SearchAdapter(Context context, ArrayList<ModelClass> arrayListUser){
         this.context = context;
         this.arrayListUser = arrayListUser;
-//        layoutInflater = LayoutInflater.from(context);
     }
+
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

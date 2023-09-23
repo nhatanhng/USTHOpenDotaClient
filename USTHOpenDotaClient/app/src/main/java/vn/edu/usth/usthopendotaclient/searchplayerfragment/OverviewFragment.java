@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import vn.edu.usth.usthopendotaclient.ModelClass;
@@ -15,6 +16,8 @@ import vn.edu.usth.usthopendotaclient.R;
 
 public class OverviewFragment extends Fragment {
     TextView player_name;
+    ImageView player_avatar;
+    TextView player_win, player_loose,player_winrate;
     ModelClass user;
 
     public OverviewFragment(ModelClass user) {
@@ -35,6 +38,17 @@ public class OverviewFragment extends Fragment {
 
         player_name = view.findViewById(R.id.A_name);
         player_name.setText(user.getUserName());
+
+        player_avatar= view.findViewById(R.id.A_image);
+        player_avatar.setImageResource(user.getImg());
+
+        player_win = view.findViewById(R.id.wins);
+        player_loose = view.findViewById(R.id.losses);
+        player_win.setText("WINS\n" + user.getUserWin());
+        player_loose.setText("LOOSES\n"+ user.getUserLose());
+
+//        player_winrate=view.findViewById(R.id.winrate);
+//        player_winrate.setText("WINRATE\n"+ user.getUserWinrate(user.getUserWin(),user.getUserLose()));
         return  view;
     }
 }

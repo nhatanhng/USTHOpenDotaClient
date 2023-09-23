@@ -6,7 +6,8 @@ import java.io.Serializable;
 
 public class ModelClass implements Serializable {
     String userName,userNum; //userNum=user id
-    String userWin, userLose, userWinrate;
+    String userWin, userLose;
+    String userWinrate;
     ProgressBar progressBar;
     int img;
 
@@ -36,7 +37,7 @@ public class ModelClass implements Serializable {
 
     // user win
     public String getUserWin() {
-        return "WINS\n " + userWin ;
+        return userWin ;
     }
     public void setUserWin(String userWin) {
         this.userWin = userWin;
@@ -44,18 +45,18 @@ public class ModelClass implements Serializable {
 
     //user lose
     public String getUserLose() {
-        return "LOOSES\n " + userLose ;
+        return userLose ;
     }
     public void setUserLose( String userLose) {
         this.userLose = userLose;
     }
 
     // user win rate
-    public String getUserWinrate() {
-        return "WINRATE\n " + userWinrate ;
-    }
-    public void setUserWinrate(String userWinrate) {
-        this.userWinrate = userWinrate;
+    public String getUserWinrate(String userWin, String userLose) {
+        Integer wins =Integer.valueOf(userWin);
+        Integer looses = Integer.valueOf(userLose);
+        this.userWinrate = Integer.toString((wins/(wins+looses))*100);
+        return userWinrate ;
     }
 
     //user progress bar depends on user win rate

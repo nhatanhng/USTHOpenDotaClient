@@ -25,6 +25,8 @@ public class Search_Activity extends AppCompatActivity {
     private SearchAdapter searchAdapter;
     ArrayList<ModelClass> arrayList = new ArrayList<>();
     ArrayList<ModelClass> searchList;
+
+    // player infor
     String[] userList = new String[] {"jojo","kaykay","jack","max","bon","david"}; //user name
     String[] userNum = new String[] {"185476982","785412058","369801472","487621007","998745301","235014785"}; // user id
     String[] userWinList = new String[] {"1", "8","45","10","6","21"};
@@ -50,13 +52,13 @@ public class Search_Activity extends AppCompatActivity {
         DrawerLayout drawerLayout = findViewById(R.id.search_drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_view);
 
+        // navigation
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
-
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -85,8 +87,7 @@ public class Search_Activity extends AppCompatActivity {
             }
         });
 
-
-
+        // add player infor to user
         for (int i = 0; i < userList.length; i++) {
             ModelClass modelClass = new ModelClass();
             modelClass.setUserName(userList[i]);
@@ -100,6 +101,7 @@ public class Search_Activity extends AppCompatActivity {
         searchAdapter = new SearchAdapter(Search_Activity.this,arrayList);
         recyclerView.setAdapter(searchAdapter);
 
+        // search bar
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
