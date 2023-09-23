@@ -49,11 +49,7 @@ public class SettingActivity extends AppCompatActivity {
         relativeLayoutSetting = findViewById(R.id.relative_layout_setting);
         RadioGroup radioGroup = findViewById(R.id.Themes);
 
-        RadioButton hyperfuseRadioButton = findViewById(R.id.Theme_Hyperfuse);
-        RadioButton skyDolchRadioButton = findViewById(R.id.Theme_SkyDolch);
-        Log.d("SettingActivity", "radioGroup: " + radioGroup);
-        Log.d("SettingActivity", "hyperfuseRadioButton: " + hyperfuseRadioButton);
-        Log.d("SettingActivity", "skyDolchRadioButton: " + skyDolchRadioButton);
+
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
