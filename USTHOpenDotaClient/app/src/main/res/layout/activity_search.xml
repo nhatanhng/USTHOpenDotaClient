@@ -10,7 +10,8 @@
  <RelativeLayout
      android:layout_width="match_parent"
      android:layout_height="match_parent"
-     android:background="@color/background">
+     android:background="@color/background"
+     android:id="@+id/relative_layout_search">
 
      <androidx.appcompat.widget.Toolbar
          android:id="@+id/search_toolbar"
