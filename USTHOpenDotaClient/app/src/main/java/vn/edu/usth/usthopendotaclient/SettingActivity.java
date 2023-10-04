@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.MenuItem;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -37,19 +39,20 @@ import vn.edu.usth.usthopendotaclient.databinding.ActivitySettingBinding;
 
 public class SettingActivity extends AppCompatActivity {
     private RelativeLayout relativeLayoutSetting;
-
-    public SettingActivity(){
-    }
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_setting);
+
         relativeLayoutSetting = findViewById(R.id.relative_layout_setting);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        int storedColor = sharedPreferences.getInt("selected_color", getResources().getColor(R.color.background));
+        relativeLayoutSetting.setBackgroundColor(storedColor);
+
         RadioGroup radioGroup = findViewById(R.id.Themes);
-
-
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
@@ -92,23 +95,12 @@ public class SettingActivity extends AppCompatActivity {
                 relativeLayoutSetting.setBackgroundColor(color);
 
 
-                // Get all radio buttons in the activity
-                RadioButton[] radioButtons = {
-                        findViewById(R.id.Theme_Default),
-                        findViewById(R.id.Theme_SkyDolch),
-                        findViewById(R.id.Theme_Hyperfuse),
-                        findViewById(R.id.Theme_Invisibility),
-                        findViewById(R.id.Theme_FUWA_FUWA_PINK),
-                        findViewById(R.id.Theme_NightDota)
-                };
+                setRadioButtonsTextColor(text_color);
+                setToolbarBackgroundColor(tool_bar_color);
 
-                // Set the text color of all radio buttons
-                for (RadioButton radioButton : radioButtons) {
-                    radioButton.setTextColor(text_color);
-                }
-                // Set the toolbar background color
-                Toolbar toolbar = findViewById(R.id.setting_toolbar);
-                toolbar.setBackgroundColor(tool_bar_color);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putInt("selected_color", color);
+                editor.apply();
             }
         });
 
@@ -156,4 +148,26 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void setRadioButtonsTextColor(int color) {
+        RadioButton[] radioButtons = {
+                findViewById(R.id.Theme_Default),
+                findViewById(R.id.Theme_SkyDolch),
+                findViewById(R.id.Theme_Hyperfuse),
+                findViewById(R.id.Theme_Invisibility),
+                findViewById(R.id.Theme_FUWA_FUWA_PINK),
+                findViewById(R.id.Theme_NightDota)
+        };
+
+        for (RadioButton radioButton : radioButtons) {
+            radioButton.setTextColor(color);
+        }
+    }
+
+    private void setToolbarBackgroundColor(int color) {
+        Toolbar toolbar = findViewById(R.id.setting_toolbar);
+        toolbar.setBackgroundColor(color);
+    }
 }
+
+

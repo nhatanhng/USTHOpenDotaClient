@@ -8,6 +8,10 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.widget.RelativeLayout;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +24,8 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 
 public class Search_Activity extends AppCompatActivity {
+    private RelativeLayout relativeLayoutSearch;
+    private SharedPreferences sharedPreferences;
     SearchView searchView;
     private RecyclerView recyclerView;
     private SearchAdapter searchAdapter;
@@ -31,10 +37,17 @@ public class Search_Activity extends AppCompatActivity {
     String[] userLooseList = new String[] {"5","2","10","22","4","18"};
     int[] imgList = new int[] {R.drawable.img1,R.drawable.img2,R.drawable.img3,R.drawable.img4,R.drawable.img5,R.drawable.img6};
 
+    // to store background color
+    private int storedColor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        relativeLayoutSearch = findViewById(R.id.relative_layout_search);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        storedColor = sharedPreferences.getInt("selected_color", getResources().getColor(R.color.background));
+        relativeLayoutSearch.setBackgroundColor(storedColor);
 
         recyclerView=findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Search_Activity.this);
@@ -168,7 +181,16 @@ public class Search_Activity extends AppCompatActivity {
                 return false;
             }
         });
-
-
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        int updatedColor = sharedPreferences.getInt("selected_color", getResources().getColor(R.color.background));
+        if (storedColor != updatedColor) {
+            storedColor = updatedColor;
+            relativeLayoutSearch.setBackgroundColor(storedColor);
+        }
     }
 }
+
+
