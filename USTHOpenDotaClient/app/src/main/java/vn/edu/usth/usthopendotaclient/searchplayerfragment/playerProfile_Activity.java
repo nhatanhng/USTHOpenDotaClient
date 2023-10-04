@@ -41,19 +41,13 @@ public class playerProfile_Activity extends AppCompatActivity {
         myTabLayout = findViewById(R.id.pp_tabLayout);
         myViewPager = findViewById(R.id.viewPager);
 
+        // get bundle which passed from search adapter
         Bundle bundle = getIntent().getExtras();
         if (bundle == null){
             return;
         }
+        // get user contained in bundle by using key "object_player"
         ModelClass user = (ModelClass) bundle.get("object_player");
-
-        TextView playerName = findViewById(R.id.txt);
-        ImageView avatar = findViewById(R.id.A_image);
-//        playerName.setText(user.getUserName());
-//        avatar.setImageResource(user.getImg());
-//        win.setText(user.getUserWin());
-//        loose.setText(user.getUserLose());
-
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,user);
         myViewPager.setOffscreenPageLimit(3);

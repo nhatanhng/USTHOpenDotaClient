@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/tablayout_item"
+        android:background="@color/item"
         app:tabGravity="fill"
         app:tabMaxWidth="0dp"
         app:tabMode="fixed"

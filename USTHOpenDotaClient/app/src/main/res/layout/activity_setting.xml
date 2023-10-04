@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".SettingActivity"
     android:id="@+id/setting_drawer_layout">
@@ -13,29 +13,31 @@
         android:layout_width="match_parent"
         android:id="@+id/relative_layout_setting"
         android:layout_height="match_parent"
-        android:background="@color/background" >
+        android:background="@color/background">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/setting_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/item"
+            app:navigationIcon="@drawable/menu_24"
+            app:title="Themes"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
         <LinearLayout
             android:id="@+id/setting_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/setting_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/item"
-                app:navigationIcon="@drawable/menu_24"
-                app:title="Themes"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            android:orientation="vertical"
+            android:layout_below="@+id/setting_toolbar">
 
             <RadioGroup
                 android:id="@+id/Themes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkedButton="@id/Theme_Default">
+                android:checkedButton="@id/Theme_Default"
+                android:paddingLeft="10dp">
 
                 <RadioButton
                     android:id="@+id/Theme_Default"

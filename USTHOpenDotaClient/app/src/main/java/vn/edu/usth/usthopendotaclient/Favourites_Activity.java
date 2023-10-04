@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -22,8 +23,10 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import vn.edu.usth.usthopendotaclient.databinding.ActivityFavouritesBinding;
+import vn.edu.usth.usthopendotaclient.searchplayerfragment.playerProfile_Activity;
 
 public class Favourites_Activity extends AppCompatActivity {
+    private CardView cardViewItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,5 +72,15 @@ public class Favourites_Activity extends AppCompatActivity {
                 return true;
             }
         });
+
+        cardViewItem = findViewById(R.id.fav_cardview);
+        cardViewItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Favourites_Activity.this, playerProfile_Activity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
