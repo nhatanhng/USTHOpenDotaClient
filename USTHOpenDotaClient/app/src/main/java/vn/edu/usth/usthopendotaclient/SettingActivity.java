@@ -40,6 +40,8 @@ import vn.edu.usth.usthopendotaclient.databinding.ActivitySettingBinding;
 public class SettingActivity extends AppCompatActivity {
     private RelativeLayout relativeLayoutSetting;
     private SharedPreferences sharedPreferences;
+    // new
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -51,6 +53,12 @@ public class SettingActivity extends AppCompatActivity {
 
         int storedColor = sharedPreferences.getInt("selected_color", getResources().getColor(R.color.background));
         relativeLayoutSetting.setBackgroundColor(storedColor);
+
+        // new
+        // Retrieve the stored color and text color from SharedPreferences
+        int storedTextColor = sharedPreferences.getInt("selected_text_color", getResources().getColor(R.color.black));
+//        textView = findViewById(R.id.);
+        textView.setTextColor(storedTextColor);
 
         RadioGroup radioGroup = findViewById(R.id.Themes);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -100,6 +108,8 @@ public class SettingActivity extends AppCompatActivity {
 
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putInt("selected_color", color);
+                // new
+                editor.putInt("selected_text_color", text_color);
                 editor.apply();
             }
         });

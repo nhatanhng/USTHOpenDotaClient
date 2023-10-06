@@ -1,9 +1,13 @@
 package vn.edu.usth.usthopendotaclient;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
+
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +18,19 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    private RelativeLayout relativeLayoutSearch;
+    private SharedPreferences sharedPreferences;
+    private int storedColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        relativeLayoutSearch = findViewById(R.id.relative_layout_main);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        storedColor = sharedPreferences.getInt("selected_color", getResources().getColor(R.color.background));
+        relativeLayoutSearch.setBackgroundColor(storedColor);
 
 //        // Player heroes fragment initial
 //        PlayerHeroesFragment firstFragment = new PlayerHeroesFragment();
@@ -66,5 +78,16 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    // keep background color
+    @Override
+    protected void onResume() {
+        super.onResume();
+        int updatedColor = sharedPreferences.getInt("selected_color", getResources().getColor(R.color.background));
+        if (storedColor != updatedColor) {
+            storedColor = updatedColor;
+            relativeLayoutSearch.setBackgroundColor(storedColor);
+        }
     }
 }
