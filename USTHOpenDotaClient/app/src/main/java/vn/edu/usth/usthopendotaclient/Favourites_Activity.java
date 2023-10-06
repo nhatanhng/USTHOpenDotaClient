@@ -1,6 +1,7 @@
 package vn.edu.usth.usthopendotaclient;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
@@ -9,8 +10,10 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
@@ -26,11 +29,19 @@ import vn.edu.usth.usthopendotaclient.databinding.ActivityFavouritesBinding;
 import vn.edu.usth.usthopendotaclient.searchplayerfragment.playerProfile_Activity;
 
 public class Favourites_Activity extends AppCompatActivity {
+    private RelativeLayout relativeLayoutSearch;
+    private SharedPreferences sharedPreferences;
+    private int storedColor;
     private CardView cardViewItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourites);
+
+        relativeLayoutSearch = findViewById(R.id.relative_layout_favorite);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        storedColor = sharedPreferences.getInt("selected_color", getResources().getColor(R.color.background));
+        relativeLayoutSearch.setBackgroundColor(storedColor);
 
         Toolbar toolbar = findViewById(R.id.favourites_toolbar);
         setSupportActionBar(toolbar);
@@ -82,5 +93,14 @@ public class Favourites_Activity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        int updatedColor = sharedPreferences.getInt("selected_color", getResources().getColor(R.color.background));
+        if (storedColor != updatedColor) {
+            storedColor = updatedColor;
+            relativeLayoutSearch.setBackgroundColor(storedColor);
+        }
     }
 }

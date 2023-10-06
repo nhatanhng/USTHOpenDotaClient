@@ -184,6 +184,8 @@ public class Search_Activity extends AppCompatActivity {
             }
         });
     }
+
+    // keep background color
     @Override
     protected void onResume() {
         super.onResume();
